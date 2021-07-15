@@ -18,6 +18,36 @@ html, body{
 	font-family: 'Fira Sans', sans-serif;
 }
 
+.nav{
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	background-color: var(--color-primary-o);
+}
+.nav_list{
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+}
+.nav_item{
+	list-style: none;
+	font-size: 1.7em;
+}
+.nav_item a{
+	color: inherit;
+	padding: 0.5em;
+}
+.nav_item:nth-child(1){
+	color: var(--color-secondary-l);
+}
+
+
+
+
+
+
+
+/* Etiquetas */
 .cs{
 	color: var(--color-secondary);
 	font-weight: bold;
