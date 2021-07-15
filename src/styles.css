@@ -1,0 +1,24 @@
+:root{
+	--color-primary-xo: #232324;
+	--color-primary-o: #2b2e30;
+	--color-primary: #343A40;
+	--color-primary-l: #44515e;
+	--color-primary-xl: #4a6075;
+
+	--color-secondary-xo: #562f8f;
+	--color-secondary-o: #633c9e;
+	--color-secondary: #7952B3;
+	--color-secondary-l: #916bc9;
+	--color-secondary-xl: #a681db;
+}
+
+html, body{
+	background-color: var(--color-primary);
+	color: #eee3ff;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.cs{
+	color: var(--color-secondary);
+	font-weight: bold;
+}
