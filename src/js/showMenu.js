@@ -1,8 +1,7 @@
-const btn = document.querySelector('.header_btn');
-const panel = document.querySelector('.header_panel');
-let showPanel = true
-
 export const defShowMenu = () => {
+	const btn = document.querySelector('.header_btn');
+	const panel = document.querySelector('.header_panel');
+	let showPanel = true
 
 	btn.addEventListener('click', () => {
 
