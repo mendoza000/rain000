@@ -2,6 +2,7 @@ import {crearHomePage} from './home-page'
 import { getData } from './clima-service'
 import { crearNav } from './nav-component'
 import { searchData } from './search-page'
+import { crearAbout } from './about-page'
 let location = "home"
 
 const eventosNav = async () => {
@@ -10,27 +11,35 @@ const eventosNav = async () => {
 	navList.addEventListener('click', async (event) => {
 		const elem = event.target
 
+
 		if (elem.classList.contains("home")
 		|| elem.classList.contains("la-home")) {
 			console.log("home");
+			if (location === "home") { return "Ya esta en search"}
 
 			const data = await getData()
 			crearHomePage(data)
 			document.querySelector('.la-home').classList.add("cs")
 			document.querySelector('.la-globe').classList.remove("cs")
+			document.querySelector('.la-user-secret').classList.remove("cs")
 			eventosNav()
 
-
+			location = "home"
 		}
 
 		if (elem.classList.contains("globe") 
 		|| elem.classList.contains("la-globe")) {
+
+			if (location === "globe") { return "Ya esta en search"}
 			
 			console.log("globe");
 			searchData()
 			document.querySelector('.la-globe').classList.add("cs")
 			document.querySelector('.la-home').classList.remove("cs")
+			document.querySelector('.la-user-secret').classList.remove("cs")
 			eventosNav()
+
+			location = "globe"
 			
 
 		}
@@ -47,7 +56,14 @@ const eventosNav = async () => {
 		if (elem.classList.contains("user")
 		|| elem.classList.contains("la-user-secret")) {
 			
-			if (location === "user") { return "Ya esta en user"}
+			if (location === "user") { return "Ya esta en user"};
+
+			crearAbout()
+			document.querySelector('.la-globe').classList.remove("cs")
+			document.querySelector('.la-user-secret').classList.add("cs")
+			document.querySelector('.la-home').classList.remove("cs")
+			eventosNav()
+
 
 			location = "user"
 

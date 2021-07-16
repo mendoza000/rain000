@@ -1,5 +1,5 @@
-import { getData } from './clima-service'
-import { crearNav } from './nav-component'
+import { getData } from './clima-service';
+import { crearNav } from './nav-component';
 
 const crearCard = (data) => {
 	document.querySelector('.search_container').innerHTML = `
@@ -59,6 +59,16 @@ export const searchData = async () => {
 			.catch(crearError())
 			event.target.value = ""
 		}
+
+		btn.addEventListener('click', function(e) {
+			if (event.target.value != ""
+			&& event.target.value != " ") {
+				getData(event.target.value)
+				.then(elem => crearCard(elem))
+				.catch(crearError())
+				event.target.value = ""
+			}
+		});
 
 	});
 }
