@@ -37,7 +37,7 @@ export const crearHomePage = async (data) => {
 		}</span>
 		<span><i class="icon las la-wind"></i> Viento: ${data.wind.speed}km/h</span>
 		<span><i class="icon las la-tree"></i> Humedad: ${data.main.humidity}%</span>
-		<span><i class="icon las la-tachometer-alt"></i> Preción: ${data.main.pressure}hPa</span>
+		<span><i class="icon las la-tachometer-alt"></i> Presión: ${data.main.pressure}hPa</span>
 	</div>
 
 
