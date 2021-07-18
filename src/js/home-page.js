@@ -8,7 +8,7 @@ export const crearHomePage = async (data) => {
 	document.querySelector('body').innerHTML += `
 	<header class="header">
 
-		<div class="btn_container">
+		<!-- <div class="btn_container">
 			<button class="header_btn">Seleccionar ubicación</button>
 			<div class="header_panel">
 			 	<button class="header_panel_btn">Pregonero</button>
@@ -16,7 +16,7 @@ export const crearHomePage = async (data) => {
 			 	<button class="header_panel_btn">Barinas</button>
 			 	<button class="header_panel_btn">Caracas</button>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="header_circle">
 			<!-- <img src="./assets/044-cloudy-2.png" alt="time_img"> -->
